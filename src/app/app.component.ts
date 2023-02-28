@@ -10,7 +10,7 @@ export class AppComponent implements OnInit {
   title = 'musicplayer-application';
 
   ngOnInit(){
-    
+    window.onbeforeunload;
     $( function() {
       var availableTags = [
         
