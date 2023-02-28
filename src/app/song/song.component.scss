@@ -1,0 +1,40 @@
+.songs{
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center	;
+}
+.songs_content{
+	width: 500px;
+	height: 400px;
+}
+.songs_content h1{
+	color: #BB86FC;
+	font-family: 'Signika Negative', sans-serif;
+}
+.songs_content p{
+	color: #cfcdcd;
+}
+::-webkit-scrollbar {
+	height: 0px;
+	width: 0px;
+  }
+audio{
+	color: #BB86FC;
+}
+
+audio::-webkit-media-controls-panel {
+     background-color: #BB86FC;
+     color: #212121;
+}
+.controls{
+	font-size: 3rem;
+}
+.rounded{
+	filter: brightness(70%) ;
+	transition: 0.3s ease;
+}
+.rounded:hover{
+	filter: brightness(100%) ;
+    transition: 0.3s ease;
+}

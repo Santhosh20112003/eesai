@@ -1,0 +1,35 @@
+.start{
+	background-color: #BB86FC;
+	color: #212121;
+	font-weight: 500;
+	font-size: 1.5rem;
+	
+}
+.preview{
+	filter: brightness(70%);
+	transition: 0.3s ease;
+}
+.preview:hover{
+	filter: brightness(100%);
+	transition: 0.3s ease;
+}	
+.con{
+	width: 600px;
+}
+
+.h1{
+	color: #BB86FC;
+	font-weight: 900;
+	
+}
+ .ui-autocomplete {
+    list-style: none;
+    background-color: gainsboro;
+    width: 50px;
+	height: 100px;
+    overflow: scroll;
+  }
+  .ui-autocomplete-category {
+    font-weight: bold;
+	color: #BB86FC;
+  }

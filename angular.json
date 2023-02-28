@@ -30,9 +30,13 @@
               "src/assets"
             ],
             "styles": [
+             
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/jquery-ui-dist/jquery-ui.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -93,12 +97,19 @@
               "src/assets"
             ],
             "styles": [
+             
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/jquery-ui-dist/jquery-ui.js"
+            ]
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "70e17f00-51ca-4522-b1a2-e94bd11ff3b4"
   }
 }
