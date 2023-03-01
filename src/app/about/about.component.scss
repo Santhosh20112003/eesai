@@ -22,14 +22,44 @@
 	font-weight: 900;
 	
 }
- .ui-autocomplete {
-    list-style: none;
-    background-color: gainsboro;
-    width: 50px;
-	height: 100px;
-    overflow: scroll;
-  }
-  .ui-autocomplete-category {
-    font-weight: bold;
-	color: #BB86FC;
+ 
+
+.mobileview{
+	display: none;
+}
+
+.bi-list{
+  font-size: 2.5rem;
+  color: #bb86fc;
+  
+}
+
+.offcanvas{
+  background-color: #bb86fc;
+}
+
+.offcanvas p{
+  color: #212121;
+}
+
+  @media (min-width:0px) and (max-width:800px) {
+
+	.mobileview{
+		display: block;
+		position: absolute;
+		top: 5px;
+		right: 10px;
+	  }
+	  
+	  .close{
+		display: none;
+	  }
+
+	  .all h1{
+		color: #BB86FC;
+	  }
+
+	  .brand-name{
+		color: #212121 !important;
+	  }
   }

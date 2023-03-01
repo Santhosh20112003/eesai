@@ -1,7 +1,39 @@
 <span (click)="back()" class="bi bi-arrow-right-circle-fill close"></span>
-<span class="container">
-	<h1 class="text-center display-5 fw-medium">About</h1>
+<span class="container  all">
+	<h1 class="text-center display-5  fw-medium text-center">ABOUT</h1>
+	<section class=" align-items-center justify-content-around mobileview" >
+		<button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><i class="bi bi-list fa-2x"></i></button>
+	
+		<div class="offcanvas offcanvas-end" style="width: 70%;" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel"  >
+		  <div class="offcanvas-header justify-content-between" >
+			<a href="https:santhosh-technologies.netlify.app" class="d-flex align-items-center justify-content-center">
+				<img src="/assets/img/logo/music-logo-dark.svg" height="100" width="100" class="img-fluid" alt="">
+				<h1 class="display-1 fw-medium brand-name">Eesai</h1>
+			</a>
+			<button type="button" class="btn-close" data-bs-dismiss="offcanvas">
+			</button>
+		  </div>
+		  <div class="offcanvas-body d-flex flex-column align-items-start justify-content-start gap-3" >
+
+			
+		  <a routerLink="/home" data-bs-dismiss="offcanvas" ><div class="btn w-70  rounded-1  px-2 d-flex align-items-center justify-content-start" >
+			
+			<p  class="fs-3 ms-2">HOME</p>
+		  </div></a>
+		<a routerLink="/allsongs" data-bs-dismiss="offcanvas">  <div class="btn w-70 rounded-1 px-2 d-flex align-items-center justify-content-start" >
+			<p  class="fs-3 ms-2" >ALL SONGS</p>
+		</div></a>
+		  <a routerLink="/about" data-bs-dismiss="offcanvas"><div class="btn w-70 rounded-1 px-2 d-flex align-items-center justify-content-start" >
+			
+			<p  class="fs-2 ms-2" >ABOUT</p>
+		  </div></a>
+		  
+		 
+		</div>
+		</div>
+	  </section>
 </span>
+
 
 <div class="d-flex align-items-center justify-content-center flex-wrap gap-2 p-4">
 	<img width="500px" height="300px" class="img-fluid preview" src="/assets/img/eesai_preview.png" alt="">

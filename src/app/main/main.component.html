@@ -1,13 +1,45 @@
 
-	<div class="greet p-3 d-flex align-items-center justify-content-between " >
+	<div class="greet  d-flex align-items-center justify-content-between " >
 		<span>
 			<h1 class="h1 fw-bold m wish">{{wish}}</h1>
 		<p class="ms-3 h4">Hello There !!</p>
 		</span>
-		<span class="d-flex align-items-center justify-content-center gap-2 flex-row-reverse">
+		<a href="https:santhosh-technologies.netlify.app" class="d-flex align-items-center logo justify-content-center gap-2 flex-row-reverse">
 			<img src="/assets/img/logo/music-logo-dark.svg" height="70" width="70" class="img-fluid" alt="">
 			<h1 class="display-5 fw-medium brand-name">Eesai</h1>
-		</span>
+		</a>
+		
+		<section class=" align-items-center py-3 justify-content-around mobileview" >
+			<button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><i class="bi bi-list fa-2x"></i></button>
+		
+			<div class="offcanvas offcanvas-end" style="width: 70%;" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel"  >
+			  <div class="offcanvas-header justify-content-between" >
+				<span class="d-flex align-items-center justify-content-center">
+					<img src="/assets/img/logo/music-logo-dark.svg" height="100" width="100" class="img-fluid" alt="">
+			        <h1 class="display-1 fw-medium brand-name">Eesai</h1>
+				</span>
+				<button type="button" class="btn-close" data-bs-dismiss="offcanvas">
+				</button>
+			  </div>
+			  <div class="offcanvas-body d-flex flex-column align-items-start justify-content-start gap-3" >
+
+				
+			  <a routerLink="/home" data-bs-dismiss="offcanvas" ><div class="btn w-70  rounded-1  px-2 d-flex align-items-center justify-content-start" >
+				
+				<p  class="fs-3 ms-2">HOME</p>
+			  </div></a>
+			<a routerLink="/allsongs" data-bs-dismiss="offcanvas">  <div class="btn w-70 rounded-1 px-2 d-flex align-items-center justify-content-start" >
+				<p  class="fs-3 ms-2" >ALL SONGS</p>
+			</div></a>
+			  <a routerLink="/about" data-bs-dismiss="offcanvas"><div class="btn w-70 rounded-1 px-2 d-flex align-items-center justify-content-start" >
+				
+				<p  class="fs-2 ms-2" >ABOUT</p>
+			  </div></a>
+			
+			 
+			</div>
+			</div>
+		  </section>
 	</div>
 	
 	
@@ -43,9 +75,12 @@
 		</button>
 	</div>
 	</div>
+	<div class="ui-widget autoComplete_wrapper mt-3 ">
+     
+		<input id="tag" dir="ltr" class="form-control" spellcheck=false autocorrect="off" autocomplete="off" autocapitalize="off" placeholder="Search for songs...">
+		</div>
 	
-	
-	<h1 class="h1 mx-5 mt-4">New Releases :)</h1>
+	<h1 class="h1 title mt-4">New Releases :)</h1>
 	
 	<section class="box">
 		
@@ -83,7 +118,7 @@
 		
 	 
 	</section>
-	  <h1 class="h1 mx-5 mt-2">Popular Hits :)</h1>
+	  <h1 class="h1 title mt-2">Popular Hits :)</h1>
 	  <section class="box">
 		<div class="card"  routerLink="/song/5">
 		  <div class="image">
@@ -124,7 +159,7 @@
 	  </section>
 	
 	  
-	<h1 class="h1 mx-5 mt-4">Tamil Hits</h1>
+	<h1 class="h1 title mt-4">Tamil Hits</h1>
 	
 	<section class="box">
 		<div class="card"  routerLink="/song/3">
@@ -162,7 +197,7 @@
 	</section>
 	
 	
-	<h1 class="h1 mx-5 mt-4">Malayalam Hits</h1>
+	<h1 class="h1 title mt-4">Malayalam Hits</h1>
 	
 	<section class="box">
 		<div class="card " routerLink="/song/9">
@@ -200,7 +235,7 @@
 	</section>
 	
 	
-	<h1 class="h1 mx-5 mt-4">Telugu Hits</h1>
+	<h1 class="h1 title mt-4">Telugu Hits</h1>
 	
 	<section class="box">
 		<div class="card"  routerLink="/song/15">
@@ -238,7 +273,7 @@
 	</section>
 	
 	
-	<h1 class="h1 mx-5 mt-4">English Hits</h1>
+	<h1 class="h1 title mt-4">English Hits</h1>
 	
 	<section class="box">
 		<div class="card"  routerLink="/song/20">

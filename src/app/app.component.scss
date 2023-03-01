@@ -37,4 +37,14 @@
   
 
  
- 
+ @media (min-width:0px) and (max-width:800px) {
+	
+	.sidebar{
+		display: none !important;
+	}
+	.content{
+		margin-left: 0px ;
+		width: 100%;
+		
+	}
+ }

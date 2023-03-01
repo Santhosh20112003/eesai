@@ -1,7 +1,9 @@
 /* Import Google font - Poppins */
 
-   
-
+  
+.greet{
+  padding: 2%;
+}
 .greet p{
   color: #b0b0b0;
 }
@@ -11,7 +13,7 @@
  }
 .carousel-item img{
  width: 100%;
- height: 400px; 
+ height: 300px; 
  filter: brightness(70%);
  object-fit: cover;
 }
@@ -61,7 +63,6 @@ body {
   align-items: center;
   flex-direction: column;
   height: 100%;
-
   min-width: 300px;
   border: transparent;
   background-color: transparent;
@@ -86,3 +87,97 @@ body {
   box-shadow: 0 5px #bb86fc;
 }
 
+.title{
+  margin-left: 4%;
+}
+
+
+.mobileview{
+	display: none;
+}
+
+.offcanvas{
+  background-color: #bb86fc;
+}
+
+.offcanvas p{
+  color: #212121;
+}
+
+.bi-list{
+  font-size: 2.5rem;
+  color: #bb86fc;
+  
+}
+.autoComplete_wrapper{
+  display: none;
+}
+.autoComplete_wrapper input{
+	caret-color: #BB86FC;
+}
+
+
+
+@media (min-width:0px) and (max-width:800px) {
+	
+  .greet{
+    padding: 0px;
+    padding-left: 5%;
+  }
+  .m{
+    font-size: 2rem;
+  }
+  .greet p{
+    font-size: 1rem;
+  }
+  .logo{
+    display: none !important;
+  }
+ 
+  .mobileview{
+    display: block;
+  }
+  
+.autoComplete_wrapper{
+  display: flex;
+  justify-content: center;
+  height: 100px;
+}
+.autoComplete_wrapper input{
+  width: 80% !important;
+}
+
+  .carousel-item img{
+    width: 100%;
+    height: 200px; 
+    filter: brightness(70%);
+    object-fit: cover;
+   }
+ 
+
+.box{
+  height: 250px !important;
+  gap: 10px;
+  padding: 1% ;
+}
+
+ .box .card{
+  min-width: 230px !important;
+ }
+
+   .image img{
+    width: 220px !important;
+   }
+
+   .card :hover{
+    filter: brightness(100%);
+    transition: 0.3s;
+    border-radius: 12px;
+    box-shadow: 0 5px #bb86fc;
+  }
+
+  .brand-name{
+    color: #212121 !important;
+  }
+
+ }

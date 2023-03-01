@@ -2,19 +2,19 @@
 	
 		
 		
-	<div class=" d-flex align-items-start justify-content-center gap-3" >
+	<div class=" d-flex main align-items-center justify-content-center gap-3" >
 		<img src={{current.img}} class="rounded" width="400px" height="400px" alt="">
 		<span class="songs_content d-flex align-items-start justify-content-evenly flex-column">
 			<span>
-				<h1 class=" text-start display-1">{{current.name}}</h1>
+		<h1 class=" text-start display-1">{{current.name}}</h1>
 		<p class="text-start ms-2 h2">{{current.artist}}</p>
 			</span>
 		<div>
-			<span class="d-flex gap-3">
+			<span class="d-flex controls gap-3">
 			<i (click)="start()"class="bi bi-arrow-left-circle-fill controls"></i>
 			<i (click)="end()"  class="bi bi-arrow-right-circle-fill controls"></i>
 			</span>
-        <div class="d-flex  gap-2 ">	
+        <div class="d-flex audio-box gap-2  ">	
 			<audio controls autoplay class="audio" accesskey="c"  (ended)="end()" class="mt-3" src="{{current.audio}}"></audio>
 		</div>
 		</div>
@@ -24,4 +24,4 @@
 
 </div> 
 
-<span routerLink="/home" class="bi bi-arrow-right-circle-fill close"></span>
+<span routerLink="/home" class="bi bi-x-circle-fill close"></span>

@@ -62,7 +62,7 @@ export class AppComponent implements OnInit {
       $( "#tags" ).autocomplete({
         source: function(request:any, response:any) {
           var results = $.ui.autocomplete.filter(availableTags, request.term);
-          response(results.slice(0, 5));
+          response(results.slice(0, 3));
       },
         select:function(request:any,response:any){
           window.onbeforeunload;
