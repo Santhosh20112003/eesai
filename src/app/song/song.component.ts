@@ -200,9 +200,6 @@ start() {
 }
 @ViewChild('audio') play: any;
 
-sap(){
-  
-}
 
 
 end() {
