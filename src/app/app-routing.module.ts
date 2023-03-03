@@ -11,6 +11,7 @@ const routes: Routes = [
   {path:'allsongs',component:AllSongsComponent},
   {path:'about',component:AboutComponent},
   {path:'song/:id',component:SongComponent},
+
   {path: '', redirectTo:'/home', pathMatch: 'full'}
 
 ];
