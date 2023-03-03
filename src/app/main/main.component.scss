@@ -116,7 +116,9 @@ body {
 	caret-color: #BB86FC;
 }
 
-
+.bi-bookmark-heart-fill{
+  font-size: smaller;
+}
 
 @media (min-width:0px) and (max-width:800px) {
 	
@@ -136,6 +138,11 @@ body {
  
   .mobileview{
     display: block;
+  }
+
+  .form-control{
+    background-color: #BB86FC;
+    color: #212121;
   }
   
 .autoComplete_wrapper{
@@ -179,5 +186,10 @@ body {
   .brand-name{
     color: #212121 !important;
   }
+
+  .smile{
+    color: #BB86FC;
+  }
+ 
 
  }
