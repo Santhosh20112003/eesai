@@ -33,7 +33,21 @@
   
 </head>
 <body>
-  
+    <div id="toastElement" class="toast" role="alert"  style="z-index: 100;position: fixed;top: 150px;right: 10px;">
+		<div class="toast-header align-items-center justify-content-between px-3" >
+			<div class=" d-flex align-items-center jusify-content-center gap-3">
+				<img src="assets/img/logo/music-logo-dark.svg" height="50" width="50" alt="">
+			<p class="h3 mt-2">Hello There !!</p>
+			</div>
+			<button class="btn-close" data-bs-dismiss="toast"></button>
+		</div>
+		<div class="toast-body bg-dark">
+			<p>Start listen to Exclusive Songs of all time artist and feel the greatest melody ...</p>
+
+            <a class="btn start">Start listening</a>
+		</div>
+		
+		</div>
   <app-root></app-root>
  
   <!-- Google Tag Manager (noscript) -->
@@ -53,6 +67,16 @@
     <!-- AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
+
+let toastelement = document.getElementById('toastElement');
+
+window.addEventListener('load',()=>{
+ let toast =new bootstrap.Toast(toastelement);
+ toast.show();
+ window.setInterval(2000,()=>{
+	toast.close();
+ })
+})
         AOS.init();
       </script>
 	<script>
