@@ -1,4 +1,5 @@
 import { Component,OnInit } from '@angular/core';
+import { SpotifyService } from './spotify.service';
 declare var $: any;
 
 @Component({
@@ -10,67 +11,25 @@ export class AppComponent implements OnInit {
   title = 'musicplayer-application';
 
   ngOnInit(){
-    window.onbeforeunload;
-    $( function() {
-      var availableTags = [
-        
-           "Chila Chila",
-         
-           "Thee Thalapathy",
-     
-           "Vaa Vaathi",
-        
-           "Porkanda Singam",
-        
-           "DaDa",
-     
-           "Ennai Vittu",
+    const data = this.songsindesktop.getnames();
+    $( "#tags" ).autocomplete({
+      source: (request:any, response:any) => {
        
-           "Vaathi Coming",
-    
-           "Ranjithame",
-      
-           "Baby",
-       
-           "Darshana",
-      
-           "Mehabooba",
-      
-           "Malare",
-     
-           "Kudukku",
-      
-           "Vaathil Melle",
-       
-           "Dooreyo",
-        
-        
-           "Marakavillaye",
-     
-           "Samajavaragamana",
-       "Oo Antava Oo Oo Antava",
-  "Pila Padesaave",
-      "Oh Sita Hey Rama",
-       "On My Way",
-       "Thunder",
-    "Shape Of You",
-      "Heat Waves",
-       "Friends"
-        
-      ];
-   
-      $( "#tags" ).autocomplete({
-        source: function(request:any, response:any) {
-          var results = $.ui.autocomplete.filter(availableTags, request.term);
-          response(results.slice(0, 3));
+        const maxResults = 3; 
+        const filteredData = data.filter((item) => item.toLowerCase().includes(request.term.toLowerCase()));
+        response(filteredData.slice(0, maxResults));
       },
-        select:function(request:any,response:any){
-          window.onbeforeunload;
-          window.location.href =`/song/${availableTags.indexOf(response.item.label)}`;
-        }
-     
-      });
-    } );
-  }
+      select: function(event:any, ui:any) {
+        console.log(ui.item.link)
+        window.location.href = `/song/${data.indexOf(ui.item.label)}`; 
+      },
+    minLength: 0,
+    autoFocus: true
+    });
+    }
+
+    constructor(private songsindesktop:SpotifyService){
+
+    }
   
 }

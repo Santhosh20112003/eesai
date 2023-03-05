@@ -9,6 +9,12 @@ import { AboutComponent } from './about/about.component';
 import { SongComponent } from './song/song.component';
 import { SpotifyService } from './spotify.service';
 import {HttpClientModule} from '@angular/common/http';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatInputModule } from '@angular/material/input';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ReactiveFormsModule } from '@angular/forms';
+import {MatButtonModule} from '@angular/material/button';
+
 
 
 
@@ -18,12 +24,18 @@ import {HttpClientModule} from '@angular/common/http';
     MainComponent,
     AllSongsComponent,
     AboutComponent,
-    SongComponent
+    SongComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    MatAutocompleteModule,
+    MatInputModule,
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
+    MatButtonModule,
+    
 
   ],
   providers: [SpotifyService],

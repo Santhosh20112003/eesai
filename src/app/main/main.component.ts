@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SpotifyService } from '../spotify.service';
 declare var $: any;
 
 @Component({
@@ -9,70 +10,27 @@ declare var $: any;
 export class MainComponent implements OnInit{
  wish:string="";
 
- ngOnInit(){
-  window.onbeforeunload;
-  $( function() {
-   
-    var availableTags = [
-      
-         "Chila Chila",
-       
-         "Thee Thalapathy",
-   
-         "Vaa Vaathi",
-      
-         "Porkanda Singam",
-      
-         "DaDa",
-   
-         "Ennai Vittu",
-     
-         "Vaathi Coming",
-  
-         "Ranjithame",
-    
-         "Baby",
-     
-         "Darshana",
-    
-         "Mehabooba",
-    
-         "Malare",
-   
-         "Kudukku",
-    
-         "Vaathil Melle",
-     
-         "Dooreyo",
-      
-      
-         "Marakavillaye",
-   
-         "Samajavaragamana",
-     "Oo Antava Oo Oo Antava",
-"Pila Padesaave",
-    "Oh Sita Hey Rama",
-     "On My Way",
-     "Thunder",
-  "Shape Of You",
-    "Heat Waves",
-     "Friends"
-      
-    ];
- 
+
+constructor(private songs:SpotifyService){
+
+}
+
+ ngOnInit(){  
+  const data = this.songs.getnames();
     $( "#tag" ).autocomplete({
-      
-      source: function(request:any, response:any) {
-        var results = $.ui.autocomplete.filter(availableTags, request.term);
-        response(results.slice(0, 2));
-    },
-      select:function(request:any,response:any){
-        window.onbeforeunload;
-        window.location.href =`/song/${availableTags.indexOf(response.item.label)}`;
-      }
-   
+      source: (request:any, response:any) => {
+       
+        const maxResults = 2  ; 
+        const filteredData = data.filter((item) => item.toLowerCase().includes(request.term.toLowerCase()));
+        response(filteredData.slice(0, maxResults));
+      },
+      select: function(event:any, ui:any) {
+        console.log(ui.item.link)
+        window.location.href = `/song/${data.indexOf(ui.item.label)}`; 
+      },
+    minLength: 0,
+    autoFocus: true
     });
-  } );
 
   if(new Date().getHours()>4 && new Date().getHours() <= 11)
 {
