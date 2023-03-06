@@ -33,7 +33,9 @@ ngOnInit(): void {
   this.value = this.route.snapshot.paramMap.get('id');
   this.y= +this.value;
   this.current = this.songs[ this.value];
-  this.j = this.y+1;
+  this.j = this._songs.length - 1;
+ 
+
 }
 
 back(){
@@ -44,7 +46,7 @@ back(){
 start() {
   window.onbeforeunload;
  if(this.y == 0){
-  location.href='/song/24';
+  location.href=`/song/${this.j}`;
  }
  else{
   location.href = `/song/${this.y-1}`;
@@ -56,11 +58,11 @@ start() {
 
 end() {
   window.onbeforeunload;
-if(this.y == 24){
+if(this.y == this.j){
   location.href = `/song/0`;
 }
 else{
-  location.href = `/song/${this.j}`;
+  location.href = `/song/${this.y+1}`;
 }
 }
 
